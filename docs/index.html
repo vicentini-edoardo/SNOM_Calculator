@@ -42,6 +42,9 @@
     .button:hover { background: #194a91; transform: translateY(-2px); }
     .button span { font-size: 21px; line-height: 1; transition: transform .2s; }
     .button:hover span { transform: translateX(3px); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .actions .button { flex: 1 1 220px; }
+    .closing .actions { width: min(100%, 470px); flex-shrink: 0; }
     .hero-note { font-size: 12px; color: var(--muted); margin-top: 12px; }
     .preview { margin: 0; border: 1px solid #bccdde; border-radius: 10px 10px 0 0; overflow: hidden; background: #f8fafc; }
     .preview-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; border-bottom: 1px solid var(--line); background: #e7eef6; font-size: 12px; color: #435a74; }
@@ -154,7 +157,10 @@
           </div>
           <div class="hero-copy">
             <p>From your sample to its near-field spectrum. Model bulk materials and layered stacks, then compare amplitude and phase with experiment.</p>
-            <a class="button" href="https://snomcalculator.streamlit.app/">Open the calculator <span aria-hidden="true">↗</span></a>
+            <div class="actions">
+              <a class="button" href="https://snomcalculator.streamlit.app/">Open the calculator <span aria-hidden="true">↗</span></a>
+              <a class="button" href="https://github.com/vicentini-edoardo/SNOM_spectra_calculator/archive/refs/heads/main.zip">Download locally <span aria-hidden="true">↓</span></a>
+            </div>
             <div class="hero-note">Free web app · Open-source Python toolkit</div>
           </div>
         </div>
@@ -230,7 +236,10 @@
     <section class="closing" aria-labelledby="closing-title">
       <div class="wrap">
         <div><h2 id="closing-title">Explore your sample’s spectrum.</h2><p>Set up a calculation and see the near-field response.</p></div>
-        <a class="button" href="https://snomcalculator.streamlit.app/">Open the calculator <span aria-hidden="true">↗</span></a>
+        <div class="actions">
+          <a class="button" href="https://snomcalculator.streamlit.app/">Open the calculator <span aria-hidden="true">↗</span></a>
+          <a class="button" href="https://github.com/vicentini-edoardo/SNOM_spectra_calculator/archive/refs/heads/main.zip">Download locally <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
     </section>
   </main>
