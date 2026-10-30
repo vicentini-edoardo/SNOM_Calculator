@@ -1,0 +1,44 @@
+s-SNOM Spectrum Calculator - quick start (copy and paste into a terminal)
+No Python or Git needed. Needs internet on the first run.
+Starts the app on your computer only. Open http://localhost:8501 if the browser does not open.
+
+=== macOS / Linux (Terminal) ===
+curl -L https://github.com/vicentini-edoardo/SNOM_Calculator/archive/refs/heads/main.zip -o SNOM_Calculator.zip
+unzip -q SNOM_Calculator.zip
+cd SNOM_Calculator-main
+bash "./Install_SNOM_Calculator_macOS.command"
+
+=== Windows (PowerShell) ===
+Invoke-WebRequest https://github.com/vicentini-edoardo/SNOM_Calculator/archive/refs/heads/main.zip -OutFile SNOM_Calculator.zip
+Expand-Archive SNOM_Calculator.zip .
+cd SNOM_Calculator-main
+cmd /c "Install_SNOM_Calculator_Windows.bat"
+
+=== First launch: security warning ===
+macOS may block a launcher the first time because it was downloaded from the internet.
+1. Double-click the launcher once and click "Done" on the warning.
+2. Open System Settings > Privacy & Security and scroll to the Security section.
+3. Click "Open Anyway" next to the blocked launcher, then confirm with your password or Touch ID.
+Repeat once for each launcher (Install, Open, Update_Material_Library).
+Windows SmartScreen may show "Windows protected your PC": click "More info", then "Run anyway".
+Commands run from Terminal or PowerShell as shown above are usually not blocked.
+
+=== Already have the folder? ===
+1. Open a terminal (macOS: Terminal; Windows: PowerShell).
+2. Go to the project folder with cd (tip: type "cd " then drag the folder into the terminal window).
+3. Copy and paste the command, then press Enter:
+macOS / Linux:  cd path/to/SNOM_Calculator
+                bash "./Install_SNOM_Calculator_macOS.command"
+Windows:        cd path\to\SNOM_Calculator
+                cmd /c "Install_SNOM_Calculator_Windows.bat"
+
+The first run installs Python packages (a few minutes) and opens the app.
+Next time, double-click Open_SNOM_Calculator_macOS.command (macOS) or
+Open_SNOM_Calculator_Windows.bat (Windows), already included in the repository.
+The Open launcher starts Streamlit directly without installing anything.
+Keep the whole folder together when moving it. Run the Install launcher after a
+move to repair the environment; this may require internet access.
+Optional: make a desktop shortcut (Windows) or alias (macOS) to the Open launcher.
+No desktop files are created automatically. Recreate your shortcut after moving
+if it stops working.
+Stop the app with Ctrl+C or by closing the terminal window.

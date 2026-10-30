@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "s-SNOM Spectrum Calculator"
+abstract: >-
+  A Streamlit application and Python toolkit for calculating normalized
+  scattering-type scanning near-field optical microscopy (s-SNOM) spectra of
+  bulk materials and finite-layer stacks with a spheroid tip model.
+version: 0.1.0
+date-released: 2026-10-30
+license: MIT
+repository-code: "https://github.com/vicentini-edoardo/SNOM_Calculator"
+authors:
+  - family-names: Vicentini
+    given-names: Edoardo
+    orcid: "https://orcid.org/0000-0003-1850-2327"
+    affiliation: "CIC nanoGUNE BRTA"
+keywords:
+  - s-SNOM
+  - near-field optics
+  - infrared nanospectroscopy
+  - spheroid tip model
+  - Streamlit
+references:
+  - type: article
+    title: "Quantitative Analytical Spheroid Model for Scattering-Type Scanning Near-Field Optical Spectroscopy"
+    authors:
+      - family-names: Voronin
+        given-names: Kirill V.
+      - family-names: Herrero León
+        given-names: Iker
+      - family-names: Hillenbrand
+        given-names: Rainer
+      - family-names: Nikitin
+        given-names: Alexey Y.
+    journal: "Advanced Optical Materials"
+    volume: 13
+    issue: 31
+    start: e01539
+    year: 2025
+    doi: 10.1002/adom.202501539
+  # Add doi, journal and year once published.
+  - type: article
+    title: "Quantitative Analytical Model for Scattering-type Scanning Near-field Optical Spectroscopy of Layered Samples"
+    authors:
+      - family-names: Voronin
+        given-names: Kirill V.
+      - family-names: Vicentini
+        given-names: Edoardo
+        orcid: "https://orcid.org/0000-0003-1850-2327"
+      - family-names: Mester
+        given-names: Lars
+      - family-names: Hillenbrand
+        given-names: Rainer
+      - family-names: Nikitin
+        given-names: Alexey Y.

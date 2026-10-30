@@ -1,0 +1,5 @@
+include LICENSE CITATION.cff app.py README.md QUICKSTART.txt requirements.txt constraints.txt constraints-intel-mac.txt CONTRIBUTING.md
+include Install_SNOM_Calculator_macOS.command Install_SNOM_Calculator_Windows.bat Open_SNOM_Calculator_macOS.command Open_SNOM_Calculator_Windows.bat
+include Update_Material_Library_macOS.command Update_Material_Library_Windows.bat
+include .streamlit/config.toml
+recursive-include docs *.md

@@ -1,0 +1,21 @@
+# Python environments, caches and build products
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Local install state and user data
+.uv/
+.env
+.env.*
+custom_material_library.json
+
+# Editor and operating-system artifacts
+.DS_Store
+*.code-workspace
+*.log
+*.tmp
+graphify-out/

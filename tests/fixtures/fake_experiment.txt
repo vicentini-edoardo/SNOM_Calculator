@@ -1,0 +1,7 @@
+# Synthetic s-SNOM signal for testing the text-data importer.
+frequency_cm1 real imag
+900 3 4
+901 5 12
+902 8 15
+903 7 24
+904 20 21

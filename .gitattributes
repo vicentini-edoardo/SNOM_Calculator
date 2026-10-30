@@ -1,0 +1,3 @@
+# cmd.exe misreads LF-only batch files (goto labels can break).
+*.bat text eol=crlf
+*.command text eol=lf

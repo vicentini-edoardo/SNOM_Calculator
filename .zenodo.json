@@ -1,0 +1,35 @@
+{
+  "title": "s-SNOM Spectrum Calculator",
+  "upload_type": "software",
+  "description": "<p>A Streamlit application and Python toolkit for calculating normalized scattering-type scanning near-field optical microscopy (s-SNOM) spectra. It models a bulk material or a finite-layer stack with a spheroid tip (GICM for isotropic layers, FIM for uniaxial layers), shows amplitude and phase for several harmonics, and compares calculations with experimental data.</p>",
+  "creators": [
+    {
+      "name": "Vicentini, Edoardo",
+      "orcid": "0000-0003-1850-2327",
+      "affiliation": "CIC nanoGUNE BRTA"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "s-SNOM",
+    "near-field optics",
+    "infrared nanospectroscopy",
+    "Streamlit",
+    "Python"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isDocumentedBy",
+      "identifier": "10.1002/adom.202501539",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "relation": "requires",
+      "identifier": "https://github.com/vicentini-edoardo/Materials_Library",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ]
+}
