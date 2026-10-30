@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vicentini-edoardo.github.io/SNOM_Calculator/sitemap.xml

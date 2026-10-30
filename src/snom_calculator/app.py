@@ -14,7 +14,7 @@ from ._ui_structure import _physical_setup, _render_compact_header
 
 def run_app() -> None:
     st.set_page_config(
-        page_title="s-SNOM Spectrum Calculator",
+        page_title="s-SNOM Spectrum Calculator – near-field spectra",
         page_icon="◉",
         layout="wide",
         initial_sidebar_state="collapsed",
