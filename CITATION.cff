@@ -17,6 +17,9 @@ authors:
     given-names: Edoardo
     orcid: "https://orcid.org/0000-0003-1850-2327"
     affiliation: "CIC nanoGUNE BRTA"
+  - family-names: Voronin
+    given-names: Kirill
+    orcid: "https://orcid.org/0000-0002-8911-1166"
 keywords:
   - s-SNOM
   - near-field optics
