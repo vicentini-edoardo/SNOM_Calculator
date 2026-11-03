@@ -30,14 +30,14 @@
     nav a:hover, .text-link:hover { color: var(--blue); }
     .nav-source { border-bottom: 1px solid var(--ink); padding-block: 5px; }
     .hero { padding: 72px 0 0; overflow: hidden; }
-    .intro { display: flex; align-items: flex-end; justify-content: space-between; gap: 56px; margin-bottom: 44px; }
+    .intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 355px); align-items: center; gap: 56px; margin-bottom: 44px; }
     .eyebrow { color: var(--blue); font-size: 13px; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 22px; }
     h1, h2, h3, p { margin-top: 0; }
     h1, h2, h3 { text-wrap: balance; }
-    h1 { font-size: clamp(40px, 5.7vw, 76px); line-height: 1.07; letter-spacing: -.04em; font-weight: 650; margin-bottom: 0; }
+    h1 { font-size: clamp(40px, 4.8vw, 64px); line-height: 1.07; letter-spacing: -.04em; font-weight: 650; margin-bottom: 0; }
     h1 span { display: block; color: var(--blue); }
     .hero-copy { max-width: 355px; padding-bottom: 4px; }
-    .hero-copy p { font-size: 18px; color: var(--muted); line-height: 1.65; margin-bottom: 25px; }
+    .hero-description { max-width: 52ch; font-size: 18px; color: var(--muted); line-height: 1.65; margin: 24px 0 0; }
     .button { display: inline-flex; align-items: center; justify-content: center; gap: 28px; min-height: 50px; padding: 12px 22px; background: var(--blue); color: var(--white); font-size: 15px; font-weight: 600; text-decoration: none; border-radius: 6px; transition: background .2s, transform .2s; }
     .button:hover { background: #194a91; transform: translateY(-2px); }
     .button span { font-size: 21px; line-height: 1; transition: transform .2s; }
@@ -94,9 +94,9 @@
     @media (min-width: 1000px) { .research-heading { position: sticky; top: 32px; } }
     @media (max-width: 900px) {
       .wrap { width: calc(100% - 48px); }
-      .intro { gap: 30px; }
-      .hero-copy { max-width: 310px; }
-      .hero-copy p { font-size: 16px; }
+      .intro { grid-template-columns: 1fr; gap: 25px; }
+      .hero-copy { max-width: 100%; }
+      .hero-description { font-size: 16px; }
       nav { gap: 20px; }
       .section-top, .research { gap: 36px; }
       .steps { gap: 26px; }
@@ -114,7 +114,7 @@
       .eyebrow { font-size: 11px; margin-bottom: 18px; }
       h1 { font-size: clamp(36px, 10vw, 58px); }
       .hero-copy { max-width: 100%; margin-top: 25px; }
-      .hero-copy p { max-width: 40ch; margin-bottom: 20px; }
+      .hero-description { max-width: 40ch; margin-top: 20px; }
       .preview-bar { padding: 10px 12px; font-size: 10px; }
       .preview-bar > span:last-child { display: none; }
       .caption { font-size: 11px; }
@@ -154,9 +154,9 @@
           <div>
             <p class="eyebrow">Near-field optical spectroscopy</p>
             <h1>s-SNOM<br><span>Spectrum Calculator</span></h1>
+            <p class="hero-description">From your sample to its near-field spectrum. Model bulk materials and layered stacks, then compare amplitude and phase with experiment.</p>
           </div>
           <div class="hero-copy">
-            <p>From your sample to its near-field spectrum. Model bulk materials and layered stacks, then compare amplitude and phase with experiment.</p>
             <div class="actions">
               <a class="button" href="https://snomcalculator.streamlit.app/">Open the calculator <span aria-hidden="true">↗</span></a>
               <a class="button" href="https://github.com/vicentini-edoardo/SNOM_spectra_calculator/archive/refs/heads/main.zip">Download locally <span aria-hidden="true">↓</span></a>
