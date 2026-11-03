@@ -52,6 +52,18 @@
     .status-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
     .preview img { display: block; width: 100%; height: auto; }
     .caption { display: flex; justify-content: space-between; gap: 20px; padding: 14px 0 0; color: var(--muted); font-size: 12px; }
+    .tabs { margin-top: 8px; }
+    .tablist { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 40px; }
+    .tab { appearance: none; background: none; border: 0; border-bottom: 3px solid transparent; margin-bottom: -1px; padding: 12px 20px; font: inherit; font-size: 15px; font-weight: 600; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s; }
+    .tab:hover { color: var(--blue); }
+    .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--blue); }
+    .tab:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; border-radius: 4px; }
+    .tabpanel[hidden] { display: none; }
+    .tabpanel > p.lead { font-size: 18px; color: var(--muted); max-width: 62ch; margin-bottom: 32px; }
+    .points { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; }
+    .points li { border-top: 1px solid var(--line); padding: 20px 0 22px 26px; position: relative; color: var(--muted); font-size: 15px; }
+    .points li::before { content: ""; position: absolute; left: 4px; top: 30px; width: 8px; height: 8px; border-radius: 50%; background: var(--blue); }
+    .points strong { display: block; color: var(--ink); font-size: 17px; font-weight: 600; margin-bottom: 4px; }
     section { padding-block: 100px; }
     .section-top { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; margin-bottom: 48px; }
     h2 { font-size: clamp(30px, 3.3vw, 44px); line-height: 1.18; letter-spacing: -.035em; font-weight: 600; margin-bottom: 20px; }
@@ -119,7 +131,9 @@
       .preview-bar > span:last-child { display: none; }
       .caption { font-size: 11px; }
       .caption > span:last-child { display: none; }
-      .section-top, .model-list, .research, .steps { grid-template-columns: 1fr; gap: 30px; }
+      .section-top, .model-list, .research, .steps, .points { grid-template-columns: 1fr; gap: 30px; }
+      .points { gap: 0; }
+      .tab { padding: 10px 14px; font-size: 14px; }
       .section-top { margin-bottom: 30px; gap: 5px; }
       section { padding-block: 56px; }
       .steps { margin-top: 30px; }
@@ -142,6 +156,7 @@
     </a>
     <nav aria-label="Main navigation">
       <a class="desktop-link" href="#models">Models</a>
+      <a class="desktop-link" href="#how-it-works">How it works</a>
       <a class="desktop-link" href="#workflow">Workflow</a>
       <a class="desktop-link" href="#resources">Resources</a>
       <a class="nav-source" href="https://github.com/vicentini-edoardo/SNOM_Calculator">GitHub <span aria-hidden="true">↗</span></a>
@@ -190,6 +205,30 @@
           <p>Define films on a substrate, including surface-normal uniaxial materials. The layer engines use the generalised image charge method (GICM) and Fourier integral method (FIM).</p>
           <a class="text-link" href="https://github.com/vicentini-edoardo/SNOM_Calculator/blob/main/docs/numerical-models.md">Read about the layer engines <span aria-hidden="true">↗</span></a>
         </article>
+      </div>
+    </section>
+    <section id="how-it-works" class="wrap" aria-labelledby="how-title">
+      <div class="section-top">
+        <h2 id="how-title">How the model works.</h2>
+        <p>A plain-language guide to what the calculator does and what each part of the model means. No equations needed.</p>
+      </div>
+      <div class="tabs" data-tabs>
+        <div class="tablist" role="tablist" aria-label="Model descriptions">
+          <button class="tab" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true">Overview</button>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="panel-overview" aria-labelledby="tab-overview" tabindex="0">
+          <p class="lead">The calculator predicts what an s-SNOM measures: how strongly, and with what timing, a sharp tip scatters light when it sits just above your sample.</p>
+          <ul class="points">
+            <li><strong>The tip is a tiny elongated spheroid.</strong>Think of a stretched egg. You set its length and the sharpness of its apex. Its material is treated as a single fixed value at every wavelength.</li>
+            <li><strong>The sample sits below the tip.</strong>It can be a thick bulk material or a stack of thin films on a substrate. Each material is described by its dielectric function, which says how it responds to light at each frequency.</li>
+            <li><strong>The tip and sample talk to each other.</strong>Light polarizes the tip, which polarizes the sample, which acts back on the tip. This near-field coupling is what makes the signal depend on the sample’s local optical properties.</li>
+            <li><strong>Only the very near field matters.</strong>The model treats the fields as static, which works because the tip is far smaller than the wavelength. The signal is strongest when the tip is within a few nanometres of the surface.</li>
+            <li><strong>The tip taps up and down.</strong>The calculator follows one tapping cycle, computes the response at many heights, and picks out the harmonics (n = 1, 2, 3 …) just as a lock-in amplifier does in the experiment.</li>
+            <li><strong>Results are relative to a reference.</strong>The sample signal is divided by the signal from a reference material, such as silicon or gold. This gives the normalized amplitude and phase you compare with measured spectra.</li>
+            <li><strong>Illumination can be included.</strong>An optional correction accounts for light that first reflects off the surface before reaching the tip. It applies equally to sample and reference.</li>
+            <li><strong>Numerical settings control accuracy.</strong>The app picks them automatically and checks convergence. Near sharp resonances it is worth testing how much the result changes when you adjust them.</li>
+          </ul>
+        </div>
       </div>
     </section>
     <section id="workflow" class="workflow" aria-labelledby="workflow-title">
@@ -248,5 +287,31 @@
     <p>Developed by Edoardo Vicentini (CIC nanoGUNE) and Kirill Voronin (DIPC)</p>
     <div><a href="https://github.com/vicentini-edoardo/SNOM_Calculator">Source code</a><a href="https://github.com/vicentini-edoardo/SNOM_Calculator/blob/main/LICENSE">MIT license</a></div>
   </footer>
+  <script>
+    (function () {
+      document.querySelectorAll("[data-tabs]").forEach(function (root) {
+        var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+        function select(tab, focus) {
+          tabs.forEach(function (t) {
+            var on = t === tab;
+            t.setAttribute("aria-selected", on ? "true" : "false");
+            t.tabIndex = on ? 0 : -1;
+            document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+          });
+          if (focus) tab.focus();
+        }
+        tabs.forEach(function (t, i) {
+          t.addEventListener("click", function () { select(t); });
+          t.addEventListener("keydown", function (e) {
+            var j = e.key === "ArrowRight" ? i + 1 : e.key === "ArrowLeft" ? i - 1 : e.key === "Home" ? 0 : e.key === "End" ? tabs.length - 1 : null;
+            if (j === null) return;
+            e.preventDefault();
+            select(tabs[(j + tabs.length) % tabs.length], true);
+          });
+        });
+        select(tabs[0]);
+      });
+    })();
+  </script>
 </body>
 </html>
