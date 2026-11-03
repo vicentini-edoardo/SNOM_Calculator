@@ -447,7 +447,8 @@ def _results_controls() -> None:
     st.markdown(
         "2. Voronin, K. V., Vicentini, E., Mester, L., Hillenbrand, R., & Nikitin, A. Y. "
         "‘Quantitative Analytical Model for Scattering-type Scanning Near-field "
-        "Optical Spectroscopy of Layered Samples’ (DOI forthcoming)."
+        "Optical Spectroscopy of Layered Samples’. *arXiv* (2026). "
+        "[doi:10.48550/arXiv.2611.01057](https://doi.org/10.48550/arXiv.2611.01057)"
     )
     st.markdown(
         "3. The source code is available at [SNOM_Calculator on GitHub]"

@@ -30,6 +30,12 @@
       "scheme": "doi"
     },
     {
+      "relation": "isDocumentedBy",
+      "identifier": "10.48550/arXiv.2611.01057",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
       "relation": "requires",
       "identifier": "https://github.com/vicentini-edoardo/Materials_Library",
       "resource_type": "software",

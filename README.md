@@ -141,7 +141,7 @@ Custom material definitions can include references. Exported spectrum CSV files 
 If you use this software, please cite it together with the paper for the model you used:
 
 - **Bulk model:** K. V. Voronin, I. Herrero León, R. Hillenbrand, A. Y. Nikitin, "Quantitative Analytical Spheroid Model for Scattering‐Type Scanning Near‐Field Optical Spectroscopy", *Adv. Opt. Mater.* **13**, e01539 (2025). [doi:10.1002/adom.202501539](https://doi.org/10.1002/adom.202501539)
-- **Finite-layer model:** K. V. Voronin, E. Vicentini, L. Mester, R. Hillenbrand, A. Y. Nikitin, "Quantitative Analytical Model for Scattering-type Scanning Near-field Optical Spectroscopy of Layered Samples" (DOI forthcoming).
+- **Finite-layer model:** K. V. Voronin, E. Vicentini, L. Mester, R. Hillenbrand, A. Y. Nikitin, "Quantitative Analytical Model for Scattering-type Scanning Near-field Optical Spectroscopy of Layered Samples", arXiv (2026). [doi:10.48550/arXiv.2611.01057](https://doi.org/10.48550/arXiv.2611.01057)
 
 If you use this software in your work, please cite it (authors: Edoardo Vicentini and Kirill Voronin). Releases are archived on Zenodo: cite the concept DOI [10.5281/zenodo.23808593](https://doi.org/10.5281/zenodo.23808593) (always the latest release), or the DOI of the specific version you used.
 

@@ -44,7 +44,6 @@ references:
     start: e01539
     year: 2025
     doi: 10.1002/adom.202501539
-  # Add doi, journal and year once published.
   - type: article
     title: "Quantitative Analytical Model for Scattering-type Scanning Near-field Optical Spectroscopy of Layered Samples"
     authors:
