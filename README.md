@@ -3,7 +3,7 @@
 A Streamlit application and Python toolkit for calculating normalized scattering-type scanning near-field optical microscopy (s-SNOM) spectra. Model a bulk material or a finite-layer stack, inspect amplitude and phase, and compare calculations with experimental data.
 
 - **Web app:** <https://snomcalculator.streamlit.app/>
-- **Source code:** <https://github.com/vicentini-edoardo/SNOM_Calculator>
+- **Project page:** <https://vicentini-edoardo.github.io/SNOM_Calculator/>
 - **Archive (Zenodo):** [doi:10.5281/zenodo.23808593](https://doi.org/10.5281/zenodo.23808593)
 
 ![s-SNOM Spectrum Calculator interface](SNOM_calculator_GUI.png)
