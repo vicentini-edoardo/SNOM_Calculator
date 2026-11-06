@@ -1088,7 +1088,7 @@ def test_quick_thickness_updates_setup_and_removed_layer_resets_selection():
     app.selectbox(key="quick_parameter_1").set_value("layer_1_thickness").run(timeout=20)
     app.number_input(key="quick_value_1").set_value(32.0).run(timeout=20)
     assert app.session_state["layer_1_thickness"] == 32.0
-    assert "Layer 1 · SiC4H · 32 nm" in _scene_from_app(app)
+    assert "Layer 1 · PMMA · 32 nm" in _scene_from_app(app)
     app.button(key="physical_remove_layer_1").click().run(timeout=20)
     assert not app.exception
     assert app.selectbox(key="quick_parameter_1").value == "tip_Hs"

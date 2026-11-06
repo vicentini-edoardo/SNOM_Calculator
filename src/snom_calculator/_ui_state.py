@@ -86,7 +86,7 @@ def _add_layer() -> None:
     ]
     defaults = {
         f"layer_{layer_id}_source": "Catalog",
-        f"layer_{layer_id}_catalog": "SiC4H",
+        f"layer_{layer_id}_catalog": "PMMA",
         f"layer_{layer_id}_variant": "",
         f"layer_{layer_id}_real": 12.0,
         f"layer_{layer_id}_imag": 0.0,
