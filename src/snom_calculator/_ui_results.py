@@ -232,7 +232,7 @@ def _dismiss_experimental_import() -> None:
 @st.dialog("Load text data", width="large", on_dismiss=_dismiss_experimental_import)
 def _experimental_import_dialog() -> None:
     uploaded = st.session_state.get("experimental_overlay_upload")
-    if uploaded is None:
+    if uploaded is None or not hasattr(uploaded, "name"):  # removed upload -> DeletedFile
         return
     st.caption(uploaded.name)
     try:
@@ -454,7 +454,10 @@ def _results_controls() -> None:
         "3. The source code is available at [SNOM_Calculator on GitHub]"
         "(https://github.com/vicentini-edoardo/SNOM_Calculator)."
     )
-    if st.session_state.get("experimental_import_open"):
+    state = st.session_state
+    # Streamlit allows one dialog per run: yield to the editor / convergence dialogs.
+    if (state.get("experimental_import_open") and not state.get("editor")
+            and "m_refinement_request" not in state):
         _experimental_import_dialog()
 
 
